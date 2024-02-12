@@ -12,4 +12,4 @@ $result = BaseQuery::find('products', ['products.id as productID', 'categories.n
     ->condition(['id'], ['='], [11])
     ->get();
 
-Kết quả: SELECT products.id as productID, categories.name as categoryName from products JOIN categories ON categories.id = products.category_id JOIN images ON images.product_id= products.id WHERE ( id= ? ) OR ( id= ? )
+SQL: SELECT products.id as productID, categories.name as categoryName from products JOIN categories ON categories.id = products.category_id JOIN images ON images.product_id= products.id WHERE ( id= ? ) OR ( id= ? )
