@@ -1,0 +1,3 @@
+CREATE Table users (
+    id BIGINT PRIMARY KEY auto_increment, fullName VARCHAR(255) not null, email VARCHAR(255) not null, password VARCHAR(255) not null, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
