@@ -174,6 +174,15 @@ class BaseQuery
         }
         return self::getIns();
     }
+    public function limit($take, $offset)
+    {
+        self::$stringQuery .= " LIMIT " . $take . " OFFSET " . $offset;
+        return self::getIns();
+    }
+    public function group($groupBy){
+        self::$stringQuery.= " GROUP BY ". $groupBy;
+        return self::getIns();
+    }
 }
 // echo BaseQuery::find('products', ['products.id as productID',   'categories.name as categoryName'])
 //     ->join(['categories', 'images'], ['categories.id = products.category_id', 'images.product_id= products.id'])
